@@ -1,277 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMOR — Contato</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap"
-    rel="stylesheet">
-  <style>
-    :root {
-      --black: #111111;
-      --gray: #666666;
-      --line: #e5e5e5;
-      --placeholder-border: #c9414c;
-      --placeholder-bg: rgba(201, 65, 76, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: var(--black);
-      background: #fff;
-    }
-
-    .topo {
-      height: 4px;
-      background: var(--black);
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 40px;
-      background: #fff;
-    }
-
-    .logo {
-      width: 46px;
-      height: 46px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px dashed var(--placeholder-border);
-      background: var(--placeholder-bg);
-      border-radius: 6px;
-      font-size: 9px;
-      text-align: center;
-      color: var(--placeholder-border);
-      line-height: 1.1;
-      padding: 2px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 46px;
-      list-style: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--black);
-      font-size: 15px;
-    }
-
-    .topo-dir {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .busca {
-      background: #f2f2f2;
-      border-radius: 20px;
-      padding: 8px 18px;
-      font-size: 13px;
-      color: #999;
-      width: 160px;
-    }
-
-    .carrinho {
-      font-size: 20px;
-    }
-
-    /* ===== BANNER ===== */
-    .capa {
-      position: relative;
-      background: url('marmore.png') center/cover no-repeat;
-      padding: 50px 0 60px;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .logo-corvo {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 10px;
-      border: 3px dashed var(--placeholder-border);
-      background: var(--placeholder-bg);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--placeholder-border);
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1.4;
-      padding: 8px;
-    }
-
-    .capa-titulo {
-      font-family: 'Playfair Display SC', Georgia, serif;
-      font-size: 56px;
-      font-weight: 700;
-      letter-spacing: 6px;
-      color: var(--black);
-    }
-
-    /* ===== CONTATO ===== */
-    .contato-wrap {
-      display: flex;
-      gap: 60px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 50px 40px 90px;
-      flex-wrap: wrap;
-    }
-
-    .form-contato {
-      flex: 1;
-      min-width: 280px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .rotulo-campo {
-      font-size: 11px;
-      color: #888;
-      margin-bottom: 6px;
-      margin-left: 20px;
-    }
-
-    .caixa-campo {
-      background: #fafafa;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 14px 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    }
-
-    .caixa-campo.textarea {
-      min-height: 220px;
-      border-radius: 20px;
-    }
-
-    .caixa-campo input,
-    .caixa-campo textarea {
-      border: none;
-      outline: none;
-      width: 100%;
-      font-size: 14px;
-      background: transparent;
-      resize: none;
-      font-family: inherit;
-    }
-
-    .caixa-campo.textarea textarea {
-      min-height: 180px;
-    }
-
-    .info-contato {
-      flex: 1;
-      min-width: 280px;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #222;
-    }
-
-    .info-contato p {
-      margin-bottom: 22px;
-    }
-
-    .info-contato b {
-      color: var(--placeholder-border);
-    }
-
-    .instrucoes {
-      max-width: 1000px;
-      margin: 0 auto 80px;
-      padding: 30px 40px;
-      border-top: 2px solid var(--line);
-    }
-
-    .instrucoes h2 {
-      font-size: 20px;
-      margin-bottom: 18px;
-    }
-
-    .instrucoes ol {
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .instrucoes li {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.5;
-    }
-
-    .instrucoes b {
-      color: var(--placeholder-border);
-    }
-
-    code {
-      background: #f2f2f2;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 13px;
-    }
-
-    @media (max-width:700px) {
-      nav ul {
-        display: none;
-      }
-
-      .capa-titulo {
-        font-size: 32px;
-        letter-spacing: 3px;
-      }
-
-      .logo-corvo {
-        width: 90px;
-        height: 90px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMOR — Contato</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
+<body class="pagina-contato">
 
   <div class="topo"></div>
   <header>
-    <div class="logo"><img src="logo-corvo.png" alt="Logo Amor" style="width:100%;height:100%;object-fit:contain;">
-    </div>
+    <div class="logo"><img src="logo-corvo.png" alt="Logo Amor"></div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roupas.html">Roupas</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contact.html">Contato</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
     <div class="topo-dir">
-      <div class="busca">Buscar</div>
-      <div class="carrinho">🛒</div>
+      <input type="text" class="busca" placeholder="Buscar">
+      <a href="carrinho.html" class="carrinho">🛒</a>
     </div>
   </header>
 
   <section class="capa">
-    <div class="logo-corvo" style="border:none;background:none;">
-      <img src="logo-corvo.png" alt="Corvo" style="width:100%;height:100%;object-fit:contain;">
+    <div class="logo-corvo">
+      <img src="logo-corvo.png" alt="Corvo">
     </div>
     <div class="capa-titulo">CONTACT</div>
   </section>
@@ -295,24 +55,21 @@
     <div class="info-contato">
       <p>Tem alguma dúvida, sugestão ou quer falar com a gente? Nossa equipe está sempre disponível para ajudar.</p>
       <p>
-        Seja para informações sobre produtos, pedidos, parcerias ou apenas para trocar uma ideia sobre a cultura
-        streetwear, entre em contato através dos nossos canais.<br>
+        Seja para informações sobre produtos, pedidos, parcerias ou apenas para trocar uma ideia sobre a cultura streetwear, entre em contato através dos nossos canais.<br>
         E-mail: <b>contato@suaempresa.com</b><br>
         Instagram: <b>@suaempresa</b><br>
         WhatsApp: <b>(00) 00000-0000</b><br>
-        Valorizamos cada pessoa que faz parte da nossa comunidade e buscamos responder todas as mensagens o mais rápido
-        possível.<br>
+        Valorizamos cada pessoa que faz parte da nossa comunidade e buscamos responder todas as mensagens o mais rápido possível.<br>
         Sem robôs. Sem respostas genéricas. Apenas pessoas apaixonadas pelo que fazem.
       </p>
     </div>
   </section>
 
-
   <footer class="rodape">
     <div class="rodape-int">
-      <div class="rodape-logo" style="border:none; background:none; flex-direction:column;">
-        <img src="logo-corvo.png" alt="Corvo" style="width:40px; margin-bottom:6px; filter:invert(1);">
-        <img src="amor.png" alt="Amor" style="width:70px; filter:invert(1);">
+      <div class="rodape-logo">
+        <img src="logo-corvo.png" alt="Corvo" class="logo-corvo-img">
+        <img src="amor.png" alt="Amor" class="logo-amor-img">
       </div>
 
       <div class="rodape-col">
@@ -320,7 +77,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="roupas.html">Produtos</a></li>
-          <li><a href="#sobre">About us</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
           <li><a href="contact.html">Contato</a></li>
           <li><a href="#">FAQ (Perguntas Frequentes)</a></li>
         </ul>
@@ -356,5 +113,4 @@
   </footer>
 
 </body>
-
 </html>
